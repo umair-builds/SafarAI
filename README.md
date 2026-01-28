@@ -1,55 +1,32 @@
-🚀 SafarAI – Intelligent Travel & Expense Companion
+# 🚀 SafarAI
+## Intelligent, Agentic Travel & Expense Companion
 
-SafarAI is a specialized AI assistant designed to act as a reliable travel guide, focusing on factual accuracy rather than generic chat responses. It calculates travel expenses, distances, and estimated arrival times for inter-city journeys by querying a structured SQL database instead of relying on model guesswork.
+SafarAI is a specialized AI assistant designed to deliver **accurate, data-driven travel insights**. Unlike generic chatbots, it computes **inter-city travel costs, distances, and ETAs** by querying structured databases instead of relying on probabilistic text generation.
 
-🧠 Agentic Architecture (Memory + Tools)
+---
 
-SafarAI follows an agent-based design with:
+## 🧠 Agentic Architecture (Memory + Tools)
 
-Stateful conversational memory to maintain travel context across turns
+SafarAI uses a stateful, agent-based architecture with conversational memory and tool/function calling. This enables the system to understand context, execute database queries, and return deterministic, explainable results while minimizing hallucinations.
 
-Tool / Function Calling to dynamically query a local SQLite database
+---
 
-Deterministic responses grounded in structured data, minimizing hallucinations
+## ⚡ Hybrid Inference (Local vs Cloud)
 
-⚡ Hybrid Model Benchmarking (Local vs Cloud)
+SafarAI supports dynamic model switching using the OpenAI SDK:
+- **Local inference:** Llama 3.2 via Ollama  
+- **Cloud inference:** Groq for ultra-low latency  
 
-The system supports dynamic model switching using the OpenAI SDK:
+This setup enables benchmarking of latency, accuracy, and cost across edge and cloud deployments.
 
-Local inference: Llama 3.2 via Ollama (edge-device friendly)
+---
 
-Cloud inference: Groq for ultra-low latency responses
+## 🎛 Interactive Demo (Gradio)
 
-This enables direct comparison of:
+SafarAI includes a clean Gradio web interface featuring real-time streaming responses and explicit visualization of tool calls, improving transparency and user trust in the system’s reasoning.
 
-Latency
+---
 
-Accuracy
+## 🧩 Tech Stack
 
-Cost efficiency
-
-🎛 Interactive Demo with Gradio
-
-SafarAI includes a clean Gradio-based web interface that:
-
-Streams responses in real time
-
-Visualizes the AI’s reasoning flow
-
-Explicitly shows when a tool call is triggered
-
-Improves transparency and user trust in AI decisions
-
-🛠 Tech Stack
-
-Python
-
-OpenAI SDK
-
-Llama 3.2 (Ollama)
-
-Groq
-
-SQLite
-
-Gradio
+Python · OpenAI SDK · Llama 3.2 (Ollama) · Groq · SQLite · Gradio
