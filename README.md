@@ -1,8 +1,55 @@
-##SafarAI: 
-Intelligent Travel & Expense Companion A specialized AI assistant that goes beyond general chat to act as a dedicated travel guide. It calculates precise travel expenses, distances, and estimated times of arrival for inter-city journeys by querying a structured SQL database, ensuring factual accuracy rather than hallucinations.
+🚀 SafarAI – Intelligent Travel & Expense Companion
 
-Agentic Architecture (Memory + Tools) Utilizes an advanced "Assistant" approach that maintains conversational memory (stateful chat) to understand context. It implements "Tool Use" (Function Calling) to perform actions beyond text generation, allowing the AI to dynamically fetch real-time data from a local SQLite database.
+SafarAI is a specialized AI assistant designed to act as a reliable travel guide, focusing on factual accuracy rather than generic chat responses. It calculates travel expenses, distances, and estimated arrival times for inter-city journeys by querying a structured SQL database instead of relying on model guesswork.
 
-Hybrid Model Benchmarking (Local vs. Cloud) Built using the standard OpenAI SDK to seamlessly switch between local inference (Llama 3.2 via Ollama) and ultra-fast cloud inference (Groq). This setup demonstrates a comparative analysis of latency, accuracy, and cost between running models on edge devices versus the cloud.
+🧠 Agentic Architecture (Memory + Tools)
 
-Interactive Demo with Gradio Features a clean, user-friendly web interface built with Gradio that visualizes the AI's "thought process." It displays real-time streaming responses and explicitly shows when the AI triggers a "Tool Call," providing transparency and building user trust in the system's logic.
+SafarAI follows an agent-based design with:
+
+Stateful conversational memory to maintain travel context across turns
+
+Tool / Function Calling to dynamically query a local SQLite database
+
+Deterministic responses grounded in structured data, minimizing hallucinations
+
+⚡ Hybrid Model Benchmarking (Local vs Cloud)
+
+The system supports dynamic model switching using the OpenAI SDK:
+
+Local inference: Llama 3.2 via Ollama (edge-device friendly)
+
+Cloud inference: Groq for ultra-low latency responses
+
+This enables direct comparison of:
+
+Latency
+
+Accuracy
+
+Cost efficiency
+
+🎛 Interactive Demo with Gradio
+
+SafarAI includes a clean Gradio-based web interface that:
+
+Streams responses in real time
+
+Visualizes the AI’s reasoning flow
+
+Explicitly shows when a tool call is triggered
+
+Improves transparency and user trust in AI decisions
+
+🛠 Tech Stack
+
+Python
+
+OpenAI SDK
+
+Llama 3.2 (Ollama)
+
+Groq
+
+SQLite
+
+Gradio
